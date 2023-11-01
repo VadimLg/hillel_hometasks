@@ -107,3 +107,19 @@ if leg_1_9 == leg_2_9:
     print('Прямоуголиный треугольник - равнобедренный')
 else:
     print('Прямоуголиный треугольник - не равнобедренный')
+
+
+# 10 Школярі та яблука
+# n школярів ділять k яблук порівну, недільний залишок залишається в кошику.
+# Скільки яблук дістанеться кожному школярові та скільки залишиться в кошику?
+# Програма отримує на вхід числа n і k - цілі, додатні, не перевищують 10000.
+print('10 Школярі та яблука:')
+
+number_of_schoolchildren_10 = int(input('Введите кол-во школьников: '))
+number_of_apples_10 = int(input('Введите кол-во яблок: '))
+
+number_of_apples_for_a_schoolchild_10 = number_of_apples_10 // number_of_schoolchildren_10
+number_of_apples_in_the_basket_10 = number_of_apples_10 % number_of_schoolchildren_10
+
+print('Каждому школьнику достанется яблок: ', number_of_apples_for_a_schoolchild_10, 'шт.')
+print('В корзине останется яблок: ', number_of_apples_in_the_basket_10, 'шт.')
