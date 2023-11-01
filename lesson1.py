@@ -177,6 +177,7 @@ print('Стоимость покупки:', purchase_price_11, 'грн.', end = 
 # приклад для перевірки програми 2
 # користувач ввів:1441
 # користувач отримує: 0, 1
+print('12 Циферблад:')
 
 number_of_minutes_12 = 0
 while (number_of_minutes_12 <=0 or number_of_minutes_12 > 1140):
