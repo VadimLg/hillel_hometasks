@@ -128,3 +128,41 @@ number_of_apples_in_the_basket_10 = number_of_apples_10 % number_of_schoolchildr
 
 print('Каждому школьнику достанется яблок: ', number_of_apples_for_a_schoolchild_10, 'шт.')
 print('В корзине останется яблок: ', number_of_apples_in_the_basket_10, 'шт.', end = '\n\n')
+
+
+# 11 Магазин канцелярських товарів
+# Одного разу, відвідавши магазин канцелярських товарів, Вася купив X олівців, Y ручок та Z фломастерів. Відомо,
+# що ціна ручки на 2 гривні більше ціни олівця та на 7 гривень менше ціни фломастера. Також відомо,
+# що вартість олівця становить 3 гривні. Потрібно визначити загальну вартість покупки.
+# Вхідні дані
+# просимо користувача ввести три змінні
+# кожне з яких не перевищує 109.
+# Вихідні дані
+# виведіть одне ціле число – вартість покупки в гривнях.
+# приклад для перевірки програми 1
+# ввів: 1 1 1
+# отримав: 20
+print('11 Магазин канцелярських товарів:')
+
+pencil_cost_11 = 3
+pen_cost_11 = 3 + 2
+marker_cost_11 = pen_cost_11 + 7
+
+number_of_pencils_11 = 0
+while (number_of_pencils_11 <=0 or number_of_pencils_11 > 109):
+    number_of_pencils_11 = int(input('Введите кол-во карандашей (от 1 до 109): '))
+
+number_of_pens_11 = 0
+while (number_of_pens_11 <=0 or number_of_pencils_11 > 109):
+    number_of_pens_11 = int(input('Введите кол-во ручек (от 1 до 109): '))
+
+number_of_markers_11 = 0
+while (number_of_markers_11 <=0 or number_of_markers_11 > 109):
+    number_of_markers_11 = int(input('Введите кол-во фломастеров (от 1 до 109): '))
+
+price_pencils_11 = number_of_pencils_11 * pencil_cost_11
+price_pencs_11 = number_of_pens_11 * pen_cost_11
+price_markers_11 = number_of_markers_11 * marker_cost_11
+purchase_price_11 = price_pencils_11 + price_pencs_11 + price_markers_11
+
+print('Стоимость покупки:', purchase_price_11, 'грн.', end = '\n\n')
