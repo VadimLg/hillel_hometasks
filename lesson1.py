@@ -76,5 +76,17 @@ print(username_6,', ваш возраст:', user_age_6, print_age_6, end = '\n\
 print('7 Перевод з цельсія в фаренгейт:')
 
 temperature_in_celsius_7 = int(input ('Введите температуру в цельсиях: '))
-temperature_in_fahrenheit_7 = temperature_in_celsius_7 * 9/5 + 32
+temperature_in_fahrenheit_7 = temperature_in_celsius_7 * 9 / 5 + 32
+
 print('Температура в фарингейтах: ', temperature_in_fahrenheit_7, end = '\n\n')
+
+
+# 8 Перевод з фаренгейта в цельсій:
+# Напишіть програму, яка запитує в користувача кількість градусів в фаренгейтах і повертає в цельсіях.
+# Вам може здатися, що ця задача така ж, як попередня, але будьте уважні і перевірте результат вручну.
+print('8 Перевод з фаренгейта в цельсій:')
+
+temperature_in_fahrenheit_8 = int(input ('Введите температуру в цельсиях: '))
+temperature_in_celsius_8 = 5 * (temperature_in_fahrenheit_8 - 32) / 9
+
+print('Температура в цельсиях: ', temperature_in_celsius_8, end = '\n\n')
