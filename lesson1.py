@@ -223,7 +223,7 @@ while True:
         break
 while True:
     percent_14 = float(input('Введите процент, который нужно оплатить (не отрицательное число от 0 до 100): '))
-    if (salary_14 >=0 or salary_14 <= 100):
+    if (percent_14 >=0 and percent_14 <= 100):
         break
 
 taxes_for_the_quarter_14 = (salary_14 / 100 * percent_14) * 3
