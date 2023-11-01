@@ -115,11 +115,16 @@ else:
 # Програма отримує на вхід числа n і k - цілі, додатні, не перевищують 10000.
 print('10 Школярі та яблука:')
 
-number_of_schoolchildren_10 = int(input('Введите кол-во школьников: '))
-number_of_apples_10 = int(input('Введите кол-во яблок: '))
+number_of_schoolchildren_10 = 0
+while (number_of_schoolchildren_10 <= 0 or number_of_schoolchildren_10 > 10000):
+    number_of_schoolchildren_10 = int(input('Введите кол-во школьников (положительное число больше нуля до 10000): '))
+
+number_of_apples_10 = 0
+while (number_of_apples_10 <= 0 or number_of_apples_10 > 10000 or number_of_apples_10 < number_of_schoolchildren_10):
+    number_of_apples_10 = int(input('Введите кол-во яблок (положительное число, не меньшее кол-ва школьников до 10000): '))
 
 number_of_apples_for_a_schoolchild_10 = number_of_apples_10 // number_of_schoolchildren_10
 number_of_apples_in_the_basket_10 = number_of_apples_10 % number_of_schoolchildren_10
 
 print('Каждому школьнику достанется яблок: ', number_of_apples_for_a_schoolchild_10, 'шт.')
-print('В корзине останется яблок: ', number_of_apples_in_the_basket_10, 'шт.')
+print('В корзине останется яблок: ', number_of_apples_in_the_basket_10, 'шт.', end = '\n\n')
