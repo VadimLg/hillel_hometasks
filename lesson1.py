@@ -69,3 +69,12 @@ elif (user_age_6 % 10 > 1) and (user_age_6 % 10 < 5) and (user_age_6 != 12) and 
 else:
     print_age_6 = 'лет'
 print(username_6,', ваш возраст:', user_age_6, print_age_6, end = '\n\n')
+
+
+# 7 Перевод з цельсія в фаренгейт:
+# Напишіть програму, яка запитує в користувача кількість градусів в цельсіях і повертає в фаренгейтах.
+print('7 Перевод з цельсія в фаренгейт:')
+
+temperature_in_celsius_7 = int(input ('Введите температуру в цельсиях: '))
+temperature_in_fahrenheit_7 = temperature_in_celsius_7 * 9/5 + 32
+print('Температура в фарингейтах: ', temperature_in_fahrenheit_7, end = '\n\n')
