@@ -51,3 +51,21 @@ s_str_5 = a_5 + b_5
 
 print('Сумма чисел: ', s_int_5)
 print('Конкатенация строк: ', s_str_5, end = '\n\n')
+
+
+# 6 Вік користувача:
+# Запитати у користувача його рік народження, ім'я та який зараз рік (три змінні)
+# та вивести на екран два прінти: ім'я та скільки років користувачу.
+print('6 Вік користувача:')
+
+year_of_birth_6 = int(input('Введите год рождения: '))
+username_6 = input('Введите Ваше имя: ')
+this_year_6 = int(input('Введите текущий год: '))
+user_age_6 = this_year_6 - year_of_birth_6
+if (user_age_6 % 10 == 1) and (user_age_6 != 11) and (user_age_6 != 111):
+    print_age_6 = 'год'
+elif (user_age_6 % 10 > 1) and (user_age_6 % 10 < 5) and (user_age_6 != 12) and (user_age_6 != 13) and (user_age_6 != 14):
+    print_age_6 = 'года'
+else:
+    print_age_6 = 'лет'
+print(username_6,', ваш возраст:', user_age_6, print_age_6, end = '\n\n')
