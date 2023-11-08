@@ -27,13 +27,11 @@ else:
 # Задача 2
 #
 # Текстова в чому різниця між is та ==?
-print('Задача 2')
 print("""
-Оператор is перевіряє ідентичність самих об'єктів. 
+Задача 2
+    Оператор is перевіряє ідентичність самих об'єктів. 
 Його використовують, щоб переконатися, що змінні вказують на той самий об'єкт у пам'яті
-
-Оператор is перевіряє ідентичність самих об'єктів. 
-Його використовують, щоб переконатися, що змінні вказують на той самий об'єкт у пам'яті
+    Оператор == перевіряє рівність значень двох об'єктів
 
 Приклад 1 у консолі:
 >>>short_str_1 = 'hello'
@@ -67,3 +65,24 @@ True
 >>>long_int_1 is long_int_2
 False
 """)
+
+# Задача 3
+# Напишіть програму яка в користувача запитує два числа(можуть бути числа типу інт,
+# а можуть бути в стр). Потім запитує це стр чи інт і в залежності від відповіді конкатенує їх або додає
+# і повертає результат перемножений на три. якщо після конкатенації отримали 10 то перемноживши на 3 отримаємо 30.
+
+print('Задача 3')
+number_str_1 = input('Enter number 1: ')
+number_str_2 = input('Enter number 2: ')
+string_or_number = input('Is it a string or a number? (Y/N)')
+
+string_or_number = string_or_number.lower()
+
+if string_or_number == 'y' or string_or_number == 'yes':
+    result = number_str_1 + number_str_2
+    print('Result =', result)
+elif string_or_number == 'n' or string_or_number == 'no':
+    result = (int(number_str_1) + int(number_str_2)) * 3
+    print('Result =', result)
+else:
+    print('An incorrect answer was entered to the question "Is it a string or a number? (Y/N)"')
