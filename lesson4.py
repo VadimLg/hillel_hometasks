@@ -29,3 +29,39 @@ else:
     result = sum(price_float_list)
 
 print(f"Підсумкова сума всіх продуктів: {round(result, 2)}")
+
+
+# Задача 2
+#
+# Переробіть задачу з попереднього уроку враховуючи ваші знання з цього уроку, використайте цикл for in або while.
+
+grocery_list = input("Напишіть продукти (5 або більше), які потрібно купити, використовуйте пробіл як роздільник: ").split()
+
+if len(grocery_list) >= 5:
+    # Відображає список доданих продуктів.
+    print(f"Зараз у кошику такі продукти: {str(grocery_list).strip('[]')}")
+    product_all_removal_flag = input('Бажаєте видалити з корзини деякі продукти? (виберіть так/т чи ні/н): ')
+    product_all_removal_flag = product_all_removal_flag.lower()
+
+    if product_all_removal_flag == 'так' or product_all_removal_flag == 'т':
+        # 5 запросів на видалення
+        for i in range(5):
+            product_number = input(f"Вкажіть порядковий номер продукту, який потрібно видалити (от 1 до {len(grocery_list)}): ")
+            grocery_list.pop(int(product_number) - 1)
+            if len(grocery_list) > 0:
+                print(f"Зараз у кошику такі продукти: {str(grocery_list).strip('[]')}")
+
+        # Перевірка порожній кошик чи ні після видалення.
+        if len(grocery_list) == 0:
+            # Порожній кошик після видалення, додайте продукти.
+            add_list = input("Кошик порожній, додайте продукти, використовуйте пробіл як роздільник: ").split()
+            grocery_list = grocery_list + add_list
+            print(f"У кошику тепер є такі продукти: {str(grocery_list).strip('[]')}\nДо побачення!")
+        else:
+            # Не порожній кошик після видалення, до побачення.
+            print(f"У кошику є такі продукти: {str(grocery_list).strip('[]')}\nДо побачення!")
+
+    else:
+        # Бажаєте видалити з корзини деякі продукти? - Ні:
+        print(f"У кошику є такі продукти: {str(grocery_list).strip('[]')}\nДо побачення!")
+
