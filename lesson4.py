@@ -22,7 +22,7 @@ if coupon == 'так' or coupon == 'т':
     if coupon_type == 'сума' or coupon_type == 'с':
         coupon_sum = float(input('Введіть суму знижки: '))
         result = sum(price_float_list) - coupon_sum
-    elif coupon_type == 'в':
+    elif coupon_type == 'відсоток' or coupon_type == 'в':
         percent = float(input('Введіть відсоток знижки: '))
         result = sum(price_float_list) - sum(price_float_list) * percent / 100
 else:
@@ -35,7 +35,8 @@ print(f"Підсумкова сума всіх продуктів: {round(result
 #
 # Переробіть задачу з попереднього уроку враховуючи ваші знання з цього уроку, використайте цикл for in або while.
 
-grocery_list = input("Напишіть продукти (5 або більше), які потрібно купити, використовуйте пробіл як роздільник: ").split()
+grocery_list = input(
+    "Напишіть продукти (5 або більше), які потрібно купити, використовуйте пробіл як роздільник: ").split()
 
 if len(grocery_list) >= 5:
     # Відображає список доданих продуктів.
@@ -46,7 +47,8 @@ if len(grocery_list) >= 5:
     if product_all_removal_flag == 'так' or product_all_removal_flag == 'т':
         # 5 запросів на видалення
         for i in range(5):
-            product_number = input(f"Вкажіть порядковий номер продукту, який потрібно видалити (от 1 до {len(grocery_list)}): ")
+            product_number = input(
+                f"Вкажіть порядковий номер продукту, який потрібно видалити (от 1 до {len(grocery_list)}): ")
             grocery_list.pop(int(product_number) - 1)
             if len(grocery_list) > 0:
                 print(f"Зараз у кошику такі продукти: {str(grocery_list).strip('[]')}")
@@ -80,7 +82,7 @@ print("Введіть ПІН-код, всього 3 спроби.")
 while attempt_pin > 0:
     pin_in = int(input(f"{4 - attempt_pin}-я спроба: "))
     attempt_pin -= 1
-    if pin != pin_in :
+    if pin != pin_in:
         print(f"Введено неправильний ПІН-код!")
         if attempt_pin == 0:
             print("Карта заблокована.")
@@ -88,3 +90,28 @@ while attempt_pin > 0:
         print("ПІН-код правильний!")
         break
 
+
+# Задача 4
+#
+# Напишіть за допомогою f-string та format. Дві стрічки де буде підставлятись імя та вік з зміних
+#
+# name = "оЛенА"
+#
+# age = 21
+#
+# f_string = тут ваш код формата ф-стрінг. | повино вийти -> Я Олена, мені 21 рік
+#
+# format_string = тут ваш код формата формат стрінг | повино вийти -> Я Олена, мені 21 рік
+#
+# print(f_string)
+#
+# print(format_string)
+
+name = "оЛенА"
+age = 21
+
+f_string = f"Я {name.title()}, мені {age} рік"
+format_string = "Я {name}, мені {age} рік".format(name=name.title(), age=age)
+
+print(f_string)
+print(format_string)
