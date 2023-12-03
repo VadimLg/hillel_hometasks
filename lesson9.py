@@ -14,7 +14,7 @@ print("Задача 2")
 try:
     dividend_number = int(input("Введіть ціле число, яке ділитимемо (якщо ввести символ, буде помилка): "))
     divider_number = int(input("Введіть число, на яке ділитимемо (якщо ввести 0 або символ, буде помилка): "))
-except (ValueError, NameError):
+except (ValueError):
     print("! Замість числа було введено символ\n")
 except:
     print("! Помилка введення даних\n")
