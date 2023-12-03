@@ -11,18 +11,30 @@ print("Cтворено requirements.txt і викладено на git\n")
 print("Задача 2")
 # Виберіть будь-яку помилку яка вам подобається і зробіть функцію яка перевіряє на цю помилку(в функції try except)
 
-dividend_number = int(input("Введіть ціле число, яке ділитимемо: "))
-divider_number = int(input("Введіть число, на яке ділитимемо (якщо ввести 0, буде відображатися помилка): "))
+try:
+    dividend_number = int(input("Введіть ціле число, яке ділитимемо (якщо ввести символ, буде помилка): "))
+    divider_number = int(input("Введіть число, на яке ділитимемо (якщо ввести 0 або символ, буде помилка): "))
+except (ValueError, NameError):
+    print("! Замість числа було введено символ\n")
+except:
+    print("! Помилка введення даних\n")
 
 
 def dividing_numbers(n_1: int, n_2: int) -> float:
     try:
         print(f"Результат обчислення = {round(n_1 / n_2, 5)}\n")
+    except ZeroDivisionError:
+        print("! На нуль у пайтоні ділити не можна\n")
     except:
-        print("На нуль у пайтоні ділити не можна\n")
+        print("! Помилка роботи функції dividing_numbers\n")
 
 
-dividing_numbers(dividend_number, divider_number)
+try:
+    dividing_numbers(dividend_number, divider_number)
+except NameError:
+    print("! Помилка вхідних даних функції при виклику функції dividing_numbers\n")
+except:
+    print("! Помилка виклику функції dividing_numbers\n")
 
 
 
