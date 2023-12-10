@@ -4,20 +4,20 @@ print("Задача 1")
 # на одній з функцій повино бути повішано два декоратора old i main.
 # додайти їх в python.ini що б були правильні виводи
 #
-print("Тести знаходяться у файлі test_1_lesson10.py")
+print("Тести знаходяться у файлі test_lesson10.py")
 #
 print("Прогони:")
 #
 print("1) всі тексти де немає лейби old")
-print('У вікні Terminal виконуємо: pytest -m "not old" -v test_1_lesson10.py')
+print('У вікні Terminal виконуємо: pytest -m "not old" -v test_lesson10.py')
 print("Скріншот у файлі result_of_run_1.png", end="\n\n")
 #
 print("2) тест де пересікаються old i main")
-print('У вікні Terminal виконуємо: pytest -m "old and main"" -v test_1_lesson10.py')
+print('У вікні Terminal виконуємо: pytest -m "old and main"" -v test_lesson10.py')
 print("Скріншот у файлі result_of_run_2.png", end="\n\n")
 #
 print("3) тести з маркерами main, new")
-print('У вікні Terminal виконуємо: pytest -m "main or new"" -v test_1_lesson10.py')
+print('У вікні Terminal виконуємо: pytest -m "main or new"" -v test_lesson10.py')
 print("Скріншот у файлі result_of_run_3.png", end="\n\n")
 
 
@@ -32,7 +32,7 @@ print("Задача 2")
 # функція що записую текст
 # і декоратор
 
-print('Тест кейси у файлі "test_2_lesson10.py"\n')
+print('Тест кейси у файлі "test_lesson10_2.py"\n')
 
 def func_decorator(func):
     def wrapper(*arg, **kwarg):
