@@ -1,0 +1,15 @@
+Input data: (1, 2, 3) Result: 6
+Input data: (1, 2, 3) Result: 6
+Input data: (1, 2, 3) Result: 6
+Input data: (1, 2, 3) Result: 6
+Input data: (3, 2, 1) Result: 6
+Input data: (-1, 2, 3) Result: 4
+Input data: (3, 2, -1) Result: 4
+Input data: (1, 2, 3) Result: 6
+Input data: (3, 2, 1) Result: 6
+Input data: (-1, 2, 3) Result: 4
+Input data: (3, 2, -1) Result: 4
+Input data: (1, 2, 3) Result: 6
+Input data: (3, 2, 1) Result: 6
+Input data: (-1, 2, 3) Result: 4
+Input data: (3, 2, -1) Result: 4
