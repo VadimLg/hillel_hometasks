@@ -1,5 +1,4 @@
-from lesson7_functions import list_sorting_increase_int, list_sorting_descending_int, list_sorting_increase_str_lenght
-import pytest
+from lesson7.lesson7_functions import list_sorting_increase_int, list_sorting_descending_int, list_sorting_increase_str_lenght
 
 list_int = [34, 456, 11, 12, -100, 77, 100, 35, 100.0, 100]
 list_str = ['груша', 'грушаa', 'банан',  'яблуко', 'диня', "слива", "апельсин"]

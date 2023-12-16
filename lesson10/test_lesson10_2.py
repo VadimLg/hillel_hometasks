@@ -1,5 +1,5 @@
 import pytest
-from lesson9 import add_three_numbers
+from lesson10.lesson10 import add_three_numbers
 
 
 # solution 1
