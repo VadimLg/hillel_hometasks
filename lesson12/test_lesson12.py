@@ -39,7 +39,7 @@ class TestQuery:
     def test_number_of_jokes(self):
         assert len(self.response.json()["result"]) == 16, "Тест на кількість жартів, на запит \"fishing\"(рибалка)"
 
-    def test_2(self):
+    def test_selected_joke(self):
         joke_template = "Chuck Norris enjoys big game deep sea fishing. He generally uses a live moose for bait."
         joke_list = []
         for x in self.response.json()["result"]:
