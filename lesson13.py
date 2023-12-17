@@ -13,14 +13,14 @@ class NotEquality:
             return False
 
 
-str_1 = NotEquality("Привіт")
-str_2 = NotEquality("Хай!")
-str_3 = NotEquality("Hello!")
+obj_str_1 = NotEquality("Привіт")
+obj_str_2 = NotEquality("Хай!")
+obj_str_3 = NotEquality("Hello!")
 
 print("Визначення нерівності довжини (не рівне - True, рівне - False)")
 
 print(("Позитивний кейс:"))
-print(str_1 != str_2)
+print(obj_str_1 != obj_str_2)
 
 print(("Негативний кейс:"))
-print(str_1 != str_3)
+print(obj_str_1 != obj_str_3)
