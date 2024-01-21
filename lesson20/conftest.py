@@ -23,7 +23,7 @@ def firefox(request):
     driver.quit()
 
 
-@pytest.fixture
+@pytest.fixture(scope="class")
 def chrome_class(request):
     s = ChromeService(r'chromedriver.exe')
     # settings driver for win 64
