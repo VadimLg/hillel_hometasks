@@ -18,7 +18,7 @@ def firefox(request):
     # settings driver for win
     driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
     request.cls.driver = driver
-    driver.implicitly_wait(5)  # імплісіті вейт це вся реалізація
+    driver.implicitly_wait(5)
     yield driver
     driver.quit()
 
