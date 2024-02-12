@@ -20,9 +20,7 @@ class TestButtons:
         self.page.button_right_click().right_click()
         assert self.page.get_button_right_click_message() == 'You have done a right click'
 
-
     def test_dynamic_id_click_button(self):
         self.page.open()
         self.page.button_dynamic_id_click().click()
         assert self.page.get_button_dynamic_id_click_message() == 'You have done a dynamic click'
-
