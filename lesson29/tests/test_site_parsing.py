@@ -3,7 +3,7 @@ from lesson29.ParsingPage import ParsingPage
 
 
 @pytest.mark.usefixtures("firefox")
-class TestCheckboxPage:
+class TestParsingPage:
     def setup(self):
         self.page = ParsingPage(self.driver)
 
