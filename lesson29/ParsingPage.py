@@ -29,7 +29,7 @@ class ParsingPage:
             file.write(rec)
         file.close()
 
-    def next_page(self, num_page):
+    def click_page(self, num_page):
         a_link = self.driver.find_element(By.XPATH, f"//li/a[contains(@href, 'page={num_page}')]")
         if a_link.is_displayed():
             a_link.click()

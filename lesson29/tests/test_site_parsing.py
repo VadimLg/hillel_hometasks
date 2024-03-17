@@ -10,6 +10,6 @@ class TestCheckboxPage:
     def test_page(self):
         self.page.open()
         self.page.parsing()
-        self.page.next_page(2)
+        self.page.click_page(2)
         self.page.parsing()
         pass
