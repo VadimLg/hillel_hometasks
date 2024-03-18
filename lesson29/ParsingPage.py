@@ -24,10 +24,9 @@ class ParsingPage:
             record = f"Дата: {date}, Найменування: {name}, Ціна: {price} грн.\n"
             recording.append(record)
 
-        file = open("result.txt", "a", encoding="utf-8")
-        for rec in recording:
-            file.write(rec)
-        file.close()
+        with open("result.txt", "a", encoding="utf-8") as file:
+            for rec in recording:
+                file.write(rec)
 
     def click_page(self, num_page):
         a_link = self.driver.find_element(By.XPATH, f"//li/a[contains(@href, 'page={num_page}')]")
